@@ -1,6 +1,10 @@
-<ul class="people">
-  <li *ngFor="let person of people" [class.selected]="person === selectedPerson" (click)="selectPerson(person)">
-    {{person.name}}
-  </li>
-</ul>
-<person-details [selectedPerson]="selectedPerson"></person-details>
+<div class="center">
+  <ul class="people">
+    <li *ngFor="let person of people" [class.selected]="person === selectedPerson" (click)="selectPerson(person)">
+      {{person.name}}
+    </li>
+  </ul>
+</div>
+<div class="center">
+  <person-details [selectedPerson]="selectedPerson"></person-details>
+</div>
