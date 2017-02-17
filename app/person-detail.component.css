@@ -10,3 +10,19 @@ button {
 button:hover {
   background-color: #cfd8dc;
 }
+
+.caption {
+  font-weight: bold;
+}
+
+.table {
+  display: table;
+  border-collapse:collapse;
+}
+.tr {
+  display:table-row;
+}
+.td {
+  display:table-cell;
+  padding:5px;
+}

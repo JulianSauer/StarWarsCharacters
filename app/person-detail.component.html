@@ -1,6 +1,31 @@
-<section *ngIf="selectedPerson" class="center">
-  <h3>You selected: {{selectedPerson.name}}</h3>
-  <h3>Description:</h3>
-  <p>{{selectedPerson.name}} weights {{selectedPerson.weight}} and is {{selectedPerson.height}} tall</p>
-</section>
-<button (click)="backToCharacterList()">Back</button>
+<div class="center">
+
+  <div class="table">
+    <div class="tr">
+      <div class="caption td">Name:</div>
+      <div class="td">{{selectedPerson.name}}</div>
+    </div>
+
+    <div class="tr"><div class="td"></div></div>
+
+    <div class="tr">
+      <div class="caption td">Description:</div>
+    </div>
+
+    <div class="tr">
+      <div class="td">Weight:</div>
+      <div class="td">{{selectedPerson.weight}}</div>
+    </div>
+    <div class="tr">
+      <div class="td">Height:</div>
+      <div class="td">{{selectedPerson.height}}m</div>
+    </div>
+    <div class="tr">
+      <div class="td">
+        <button (click)="backToCharacterList()">Back</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
