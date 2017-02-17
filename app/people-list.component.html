@@ -1,10 +1,11 @@
-<div class="center">
+<div>
   <ul class="people">
-    <li *ngFor="let person of people" [class.selected]="person === selectedPerson" (click)="selectPerson(person)">
-      {{person.name}}
+    <li *ngFor="let person of people">
+      <a href="#" [routerLink]="['/character', person.id]">
+        <div>
+          {{person.name}}
+        </div>
+      </a>
     </li>
   </ul>
-</div>
-<div class="center">
-  <person-details [selectedPerson]="selectedPerson"></person-details>
 </div>

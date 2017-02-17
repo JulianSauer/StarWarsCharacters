@@ -1,5 +1,6 @@
-<section *ngIf="selectedPerson">
+<section *ngIf="selectedPerson" class="center">
   <h3>You selected: {{selectedPerson.name}}</h3>
   <h3>Description:</h3>
   <p>{{selectedPerson.name}} weights {{selectedPerson.weight}} and is {{selectedPerson.height}} tall</p>
 </section>
+<button (click)="backToCharacterList()">Back</button>

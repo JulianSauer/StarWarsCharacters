@@ -3,9 +3,10 @@ import {BrowserModule} from "@angular/platform-browser";
 import {AppComponent} from "./app.component";
 import {PeopleListComponent} from "./people-list.component";
 import {PersonDetailsComponent} from "./person-details.component";
+import {AppRoutesModule} from "./app-routes.module";
 
 @NgModule({
-  imports: [BrowserModule],
+  imports: [BrowserModule, AppRoutesModule],
   declarations: [AppComponent, PeopleListComponent, PersonDetailsComponent],
   bootstrap: [AppComponent]
 })
