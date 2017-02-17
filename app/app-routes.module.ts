@@ -1,12 +1,12 @@
 import {NgModule} from "@angular/core";
 import {Routes, RouterModule} from "@angular/router";
-import {PeopleListComponent} from "./people-list.component";
-import {PersonDetailsComponent} from "./person-details.component";
+import {CharacterListComponent} from "./character-list.component";
+import {CharacterDetailsComponent} from "./character-details.component";
 
 const routes: Routes = [
   {path: '', redirectTo: '/characters', pathMatch: 'full'},
-  {path: 'characters', component: PeopleListComponent},
-  {path: 'character/:id', component: PersonDetailsComponent}
+  {path: 'characters', component: CharacterListComponent},
+  {path: 'character/:id', component: CharacterDetailsComponent}
 ];
 
 @NgModule({

@@ -1,0 +1,11 @@
+<div>
+  <ul class="people">
+    <li *ngFor="let character of characters">
+      <a href="#" [routerLink]="['/character', character.id]">
+        <div>
+          {{character.name}}
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
