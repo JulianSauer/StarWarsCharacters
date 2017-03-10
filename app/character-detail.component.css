@@ -11,6 +11,28 @@ button:hover {
   background-color: #cfd8dc;
 }
 
+.left-button {
+  margin-right: 3px;
+}
+
+.right-button {
+  margin-left: 3px;
+}
+
+.ng-invalid {
+  border: 1px solid #a94442;
+}
+
+.error {
+  color: #a94442;
+}
+
+input {
+  padding-left: 3px;
+  border: 1px solid #8a9397;
+  border-radius: 4px;
+}
+
 .caption {
   font-weight: bold;
 }

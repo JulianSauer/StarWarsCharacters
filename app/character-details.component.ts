@@ -12,13 +12,13 @@ export class CharacterDetailsComponent implements OnInit, OnDestroy {
 
   subscribe: any;
 
-  constructor(private peopleService: CharacterService, private activatedRoute: ActivatedRoute, private router: Router) {
+  constructor(private characterService: CharacterService, private activatedRoute: ActivatedRoute, private router: Router) {
   }
 
   ngOnInit() {
     this.subscribe = this.activatedRoute.params.subscribe(params => {
       let id = Number.parseInt(params['id']);
-      this.selectedCharacter = this.peopleService.get(id);
+      this.selectedCharacter = this.characterService.get(id);
     })
   }
 
@@ -32,6 +32,13 @@ export class CharacterDetailsComponent implements OnInit, OnDestroy {
   backToCharacterList() {
     let link = ['/characters'];
     this.router.navigate(link);
+  }
+
+  saveCharacterDetails() {
+    this.characterService.save(this.selectedCharacter);
+    let link = ['/characters'];
+    this.router.navigate(link);
+    //alert(`Saved values for ${this.selectedCharacter.name}.`)
   }
 
 }

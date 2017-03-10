@@ -4,9 +4,10 @@ import {AppComponent} from "./app.component";
 import {CharacterListComponent} from "./character-list.component";
 import {CharacterDetailsComponent} from "./character-details.component";
 import {AppRoutesModule} from "./app-routes.module";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
-  imports: [BrowserModule, AppRoutesModule],
+  imports: [BrowserModule, AppRoutesModule, FormsModule],
   declarations: [AppComponent, CharacterListComponent, CharacterDetailsComponent],
   bootstrap: [AppComponent]
 })

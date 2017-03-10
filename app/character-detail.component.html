@@ -2,29 +2,61 @@
 
   <div class="table">
     <div class="tr">
-      <div class="caption td">Name:</div>
-      <div class="td">{{selectedCharacter.name}}</div>
+      <div class="caption td"><label for="name">Name: </label></div>
+      <div class="td"><input type="text" name="name" id="name" required [(ngModel)]="selectedCharacter.name"
+                             #name="ngModel"></div>
     </div>
 
-    <div class="tr"><div class="td"></div></div>
+    <div class="tr">
+      <div class="td"></div>
+    </div>
 
     <div class="tr">
       <div class="caption td">Description:</div>
     </div>
 
     <div class="tr">
-      <div class="td">Weight:</div>
-      <div class="td">{{selectedCharacter.weight}}</div>
+      <div class="td"><label for="weight">Weight: </label></div>
+      <div class="td"><input type="number" name="weight" id="weight" required [(ngModel)]="selectedCharacter.weight"
+                             #weight="ngModel"></div>
     </div>
     <div class="tr">
-      <div class="td">Height:</div>
-      <div class="td">{{selectedCharacter.height}}m</div>
+      <div class="td"><label for="height">Height: </label></div>
+      <div class="td"><input type="number" name="height" id="height" required [(ngModel)]="selectedCharacter.height"
+                             #height="ngModel"></div>
     </div>
     <div class="tr">
       <div class="td">
-        <button (click)="backToCharacterList()">Back</button>
+
       </div>
     </div>
+  </div>
+
+  <div class="center">
+    <div class="table">
+      <div class="tr">
+
+        <div class="td">
+          <button (click)="backToCharacterList()" class="left-button">Cancel</button>
+        </div>
+
+        <div class="td">
+          <form (ngSubmit)="saveCharacterDetails()" #characterForm="ngForm">
+            <button type="submit"
+                    [disabled]="!(name.valid || name.pristine) && (weight.valid || weight.pristine) && (height.valid || height.pristine)"
+                    class="right-button">Save
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div
+    [hidden]="(name.valid || name.pristine) && (weight.valid || weight.pristine) && (height.valid || height.pristine)"
+    class="error">
+    Please fill out the missing values!
   </div>
 
 </div>
